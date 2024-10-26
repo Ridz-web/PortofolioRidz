@@ -11,13 +11,13 @@
 }
 @font-face {
   font-family: Olga;
-  src: url(/assets/Olga--vV2Ogx6.ttf) format("truetype");
+  src: url(./Olga--vV2Ogx6.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: Glaciall;
-  src: url(/assets/Glaciall-Ce4qgOWG.ttf) format("truetype");
+  src: url(./Glaciall-Ce4qgOWG.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -592,10 +592,10 @@ video {
   --tw-bg-opacity: 0.3;
 }
 .bg-\[url\(\'\.\/assets\/Contact\/layer-base\.png\'\)\] {
-  background-image: url(/assets/layer-base-Cn28_ipQ.png);
+  background-image: url(./layer-base-Cn28_ipQ.png);
 }
 .bg-\[url\(\'\.\/assets\/Header\/HeaderBG\.jpg\'\)\] {
-  background-image: url(/assets/HeaderBG-YHoK-39e.jpg);
+  background-image: url(./HeaderBG-YHoK-39e.jpg);
 }
 .bg-cover {
   background-size: cover;
