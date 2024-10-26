@@ -1,0 +1,27 @@
+.text {
+  text-shadow: 0 0 15px #ba9827;
+}
+.ridho {
+  text-shadow: 0 0 10px rgb(59 130 246);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Olga";
+  src: url("./font/Olga.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Glaciall";
+  src: url("./font/Glaciall.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.textt {
+  text-shadow: 0 0 20px #ba9827;
+}
