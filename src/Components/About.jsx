@@ -31,7 +31,7 @@ const About = () => {
     <div id="about" className="container mx-auto">
       <div className="justify-center items-center min-h-screen font-bold text-white">
         <div className="font-bold font-olga text-end me-52 text-4xl pt-20 text-yellow-500">
-          About Me
+          🤵🏻 About Me
         </div>
         <div className="mt-2 h-1 me-52 ms-auto bg-white w-10"></div>
         <div className="mt-2 h-1 me-56 hidden lg:block ms-auto bg-white w-10"></div>

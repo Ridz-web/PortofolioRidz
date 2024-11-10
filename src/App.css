@@ -2,7 +2,7 @@
   text-shadow: 0 0 15px #ba9827;
 }
 .ridho {
-  text-shadow: 0 0 10px rgb(59 130 246);
+  text-shadow: 0 0 10px black;
 }
 * {
   margin: 0;
@@ -24,4 +24,9 @@
 }
 .textt {
   text-shadow: 0 0 20px #ba9827;
+}
+#particle {
+  position: absolute; /* Gunakan absolute agar tidak mempengaruhi layout */
+  height: 100%; /* Atur tinggi sesuai parent */
+  width: 100%; /* Atur lebar sesuai parent */
 }

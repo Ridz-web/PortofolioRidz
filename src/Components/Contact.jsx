@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import twitter from "../assets/SosialMedia/twitter.svg";
 import instagram from "../assets/SosialMedia/instagram.svg";
 import tiktok from "../assets/SosialMedia/tiktok.svg";
 import github from "../assets/SosialMedia/github.svg";
 import laptop from "../assets/Contact/laptop.jpg";
-import { motion } from "framer-motion";
+import FAQ from "../assets/SosialMedia/faq-icon.svg";
 
 const Contact = () => {
+  const Navigate = useNavigate();
+
   const [zoomedIndexes, setZoomedIndexes] = useState([
+    false,
     false,
     false,
     false,
@@ -57,7 +61,7 @@ const Contact = () => {
                     height: "28px",
                     marginTop: "8px",
                     transition: "transform 0.3s",
-                    transform: zoomedIndexes[0] ? "scale(1.5)" : "scale(1)",
+                    transform: zoomedIndexes[0] ? "scale(1.3)" : "scale(1)",
                   }}
                   onMouseEnter={() => handleMouseEnter(0)}
                   onMouseLeave={() => handleMouseLeave(0)}
@@ -75,7 +79,7 @@ const Contact = () => {
                     height: "28px",
                     marginTop: "8px",
                     transition: "transform 0.3s",
-                    transform: zoomedIndexes[1] ? "scale(1.5)" : "scale(1)",
+                    transform: zoomedIndexes[1] ? "scale(1.3)" : "scale(1)",
                   }}
                   onMouseEnter={() => handleMouseEnter(1)}
                   onMouseLeave={() => handleMouseLeave(1)}
@@ -93,7 +97,7 @@ const Contact = () => {
                     height: "28px",
                     marginTop: "8px",
                     transition: "transform 0.3s",
-                    transform: zoomedIndexes[2] ? "scale(1.5)" : "scale(1)",
+                    transform: zoomedIndexes[2] ? "scale(1.3)" : "scale(1)",
                   }}
                   onMouseEnter={() => handleMouseEnter(2)}
                   onMouseLeave={() => handleMouseLeave(2)}
@@ -111,12 +115,30 @@ const Contact = () => {
                     height: "28px",
                     marginTop: "8px",
                     transition: "transform 0.3s",
-                    transform: zoomedIndexes[3] ? "scale(1.5)" : "scale(1)",
+                    transform: zoomedIndexes[3] ? "scale(1.3)" : "scale(1)",
                   }}
                   onMouseEnter={() => handleMouseEnter(3)}
                   onMouseLeave={() => handleMouseLeave(3)}
                 />
               </a>
+              <button
+                onClick={() => Navigate("/faq")}
+                target="_blank"
+                rel="noopener noreferrer">
+                <img
+                  src={FAQ}
+                  alt=""
+                  style={{
+                    width: "28px",
+                    height: "28px",
+                    marginTop: "8px",
+                    transition: "transform 0.3s",
+                    transform: zoomedIndexes[4] ? "scale(1.3)" : "scale(1)",
+                  }}
+                  onMouseEnter={() => handleMouseEnter(4)}
+                  onMouseLeave={() => handleMouseLeave(4)}
+                />
+              </button>
             </div>
           </div>
           <div className="flex items-center justify-center">

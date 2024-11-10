@@ -59,7 +59,9 @@ const Header = () => {
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             className={`lg:text-white transition-transform duration-300 ${
-              scales[index] ? "underline font-bold" : "font-normal no-underline"
+              scales[index]
+                ? "underline font-medium"
+                : "font-normal no-underline"
             }`}>
             <a href={`#${text.toLowerCase()}`} className="lg:text-white">
               {text}
@@ -98,26 +100,28 @@ const Header = () => {
               </button>
             )}
             {/* Navbar List for Desktop */}
-            <ul className="hidden md:flex space-x-4">
-              {["About", "Roadmap", "Motivation", "Contact"].map(
-                (text, index) => (
-                  <li
-                    key={index}
-                    onClick={() => handleClick(index)}
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={() => handleMouseLeave(index)}
-                    className={`text-white transition-transform duration-300 ${
-                      scales[index] ? "scale-125 font-bold" : "scale-100"
-                    }`}>
-                    <a
-                      href={`#${text.toLowerCase()}`}
-                      className="lg:text-white">
-                      {text}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
+            <div className="bg-zinc-800 lg:p-4 lg:ps-10 lg:pe-10 lg:rounded-b-full sticky top-0 z-50 pe-10">
+              <ul className="hidden md:flex space-x-4">
+                {["About", "Roadmap", "Motivation", "Contact"].map(
+                  (text, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleClick(index)}
+                      onMouseEnter={() => handleMouseEnter(index)}
+                      onMouseLeave={() => handleMouseLeave(index)}
+                      className={` transition-transform duration-300 ${
+                        scales[index] ? " text-yellow-500" : ""
+                      }`}>
+                      <a
+                        href={`#${text.toLowerCase()}`}
+                        className="lg:font-medium">
+                        {text}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
           </nav>
         </div>
       </motion.div>
@@ -133,27 +137,24 @@ const Header = () => {
         transition={{ duration: 2 }}>
         <div className="flex items-center justify-center min-h-screen font-bold text-white">
           <div className="text-center">
-            <div className="font-bold font-olga text-3xl lg:text-7xl">
-              <span className="font-bold text font-olga text-3xl lg:text-7xl">
-                HELLO I'M{" "}
-              </span>
-              <span className="text-blue-500 ridho ms-3">
+            <div className="font-bold font-olga text-4xl lg:text-7xl">
+              <span className="text-yellow-500 ridho text ms-3">
                 <Typewriter
-                  words={["RIDHO", "BUDI", "MUTA'ALI"]}
+                  words={[" HELLO I'M RIDHO"]}
                   loop={0}
                   cursor="|"
-                  typeSpeed={100}
-                  deleteSpeed={80}
-                  delaySpeed={1000}
+                  typeSpeed={80}
+                  deleteSpeed={20}
+                  delaySpeed={3000}
                 />
               </span>
             </div>
             <h4
-              className="font-bold mt-2 text font-glaci text-2xl lg:text-4xl"
-              style={{ letterSpacing: "10px" }}>
+              className="font-bold lg:mt-2 font-glaci text-2xl lg:text-4xl"
+              style={{ letterSpacing: "5px" }}>
               Website Developer
             </h4>
-            <p className="mt-2 text">Welcome to my portfolio website</p>
+            <p className="lg:mt-2">Welcome to my portfolio website</p>
           </div>
         </div>
       </motion.div>

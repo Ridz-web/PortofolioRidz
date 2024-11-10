@@ -8,7 +8,6 @@ import phpImage from "../assets/AboutSkill/PHP.png";
 import laravelImage from "../assets/AboutSkill/Laravel.png";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { div } from "framer-motion/client";
 import {
   Step,
   StepLabel,
@@ -38,7 +37,7 @@ const completedSteps = [0, 1, 2, 3, 4];
 const Roadmap = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0,
+    threshold: 0.8,
   });
 
   const rotateVariants = {
@@ -69,36 +68,43 @@ const Roadmap = () => {
   return (
     <>
       <div className="grid lg:grid-flow-col lg:grid-cols-3">
-        <div className="mx-auto hidden lg:block">
-          <a
-            href="https://www.w3schools.com/"
-            target="_blank"
-            rel="noopener noreferrer">
-            <div
-              className="pb-40 ms-20 mt-24"
-              style={{
-                backgroundColor: zoomedI[0] ? "rgb(234 179 8)" : "#1c1c1c",
-                color: zoomedI[0] ? "#1c1c1c" : "#fff",
-                boxShadow: zoomedI[0]
-                  ? "0 2px 10px #1c1c1c"
-                  : "0 2px 10px rgb(234 179 8)",
-                transition: "background-color 0.3s",
-              }}
-              onMouseEnter={() => MouseEnter(0)}
-              onMouseLeave={() => MouseLeave(0)}>
-              <div className="font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10">
-                My learning place ✍
+        <motion.div
+          ref={ref}
+          initial={{ y: 10 }}
+          animate={inView ? { y: 1 } : {}}
+          transition={{ duration: 1 }}>
+          <div className="mx-auto hidden absolute lg:block">
+            <a
+              href="https://www.w3schools.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <div
+                className="pb-40 ms-20 mt-24"
+                style={{
+                  backgroundColor: zoomedI[0] ? "rgb(234 179 8)" : "#1c1c1c",
+                  color: zoomedI[0] ? "#1c1c1c" : "#fff",
+                  boxShadow: zoomedI[0]
+                    ? "0 2px 10px #1c1c1c"
+                    : "0 2px 10px rgb(234 179 8)",
+                  transition: "background-color 0.3s",
+                }}
+                onMouseEnter={() => MouseEnter(0)}
+                onMouseLeave={() => MouseLeave(0)}>
+                <div className="font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10">
+                  My learning place ✍
+                </div>
+                <p className="text-center m-8 mt-20 text-wrap">
+                  I often find myself learning programming on my own through
+                  various online resources rather than relying solely on my
+                  school curriculum. It’s this self-taught approach that has
+                  fueled my passion and allowed me to explore diverse coding
+                  challenges.
+                </p>
+                <p className="text-center text-3xl">💻💻💻</p>
               </div>
-              <p className="text-center m-8 mt-20 text-wrap">
-                I often find myself learning programming on my own through
-                various online resources rather than relying solely on my school
-                curriculum. It’s this self-taught approach that has fueled my
-                passion and allowed me to explore diverse coding challenges.
-              </p>
-              <p className="text-center text-3xl">💻💻💻</p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        </motion.div>
         <div>
           <Container
             maxWidth="md"
@@ -118,8 +124,8 @@ const Roadmap = () => {
               </Box>
               <motion.div
                 ref={ref}
-                initial={{ opacity: 0, x: 20 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 1 }}
                 className="flex items-center">
                 <Box
@@ -174,37 +180,43 @@ const Roadmap = () => {
             </Paper>
           </Container>
         </div>
-        <div className="mx-auto hidden lg:block">
-          <a
-            href="https://www.youtube.com/results?search_query=learning+programming+language+playlist"
-            target="_blank"
-            rel="noopener noreferrer">
-            <div
-              className="pb-40 me-20 mt-24"
-              style={{
-                backgroundColor: zoomedI[1] ? "rgb(234 179 8)" : "#1c1c1c",
-                color: zoomedI[1] ? "#1c1c1c" : "#fff",
-                boxShadow: zoomedI[1]
-                  ? "0 2px 10px #1c1c1c"
-                  : "0 2px 10px rgb(234 179 8)",
-                transition: "background-color 0.3s",
-              }}
-              onMouseEnter={() => MouseEnter(1)}
-              onMouseLeave={() => MouseLeave(1)}>
-              <div className="font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10">
-                My Goal 🎯
+        <motion.div
+          ref={ref}
+          initial={{ y: -10 }}
+          animate={inView ? { y: 1 } : {}}
+          transition={{ duration: 1 }}>
+          <div className="mx-auto absolute hidden lg:block">
+            <a
+              href="https://www.youtube.com/results?search_query=learning+programming+language+playlist"
+              target="_blank"
+              rel="noopener noreferrer">
+              <div
+                className="pb-40 me-20 mt-24"
+                style={{
+                  backgroundColor: zoomedI[1] ? "rgb(234 179 8)" : "#1c1c1c",
+                  color: zoomedI[1] ? "#1c1c1c" : "#fff",
+                  boxShadow: zoomedI[1]
+                    ? "0 2px 10px #1c1c1c"
+                    : "0 2px 10px rgb(234 179 8)",
+                  transition: "background-color 0.3s",
+                }}
+                onMouseEnter={() => MouseEnter(1)}
+                onMouseLeave={() => MouseLeave(1)}>
+                <div className="font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10">
+                  My Goal 🎯
+                </div>
+                <p className="text-center m-8 mt-16 text-wrap">
+                  My goal is to become a skilled full stack developer and to
+                  gain extensive knowledge in the world of programming. With
+                  expertise across various technologies, I aim to create
+                  innovative and impactful solutions while continuously
+                  deepening my knowledge and skills in this field.
+                </p>
+                <p className="text-center text-3xl">✨✨✨</p>
               </div>
-              <p className="text-center m-8 mt-16 text-wrap">
-                My goal is to become a skilled full stack developer and to gain
-                extensive knowledge in the world of programming. With expertise
-                across various technologies, I aim to create innovative and
-                impactful solutions while continuously deepening my knowledge
-                and skills in this field.
-              </p>
-              <p className="text-center text-3xl">✨✨✨</p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </>
   );

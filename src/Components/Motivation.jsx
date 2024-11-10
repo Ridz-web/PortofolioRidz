@@ -44,7 +44,7 @@ function Motivation() {
   return (
     <div className="container mx-auto p-4">
       <div className="font-bold text-center lg:text-start lg:ms-14 font-olga text-4xl pt-24 text-yellow-500">
-        Motivation
+        Motivation 🔑
       </div>
       <div className="mt-2 mx-auto lg:mx-0 h-1 lg:ms-14 bg-white w-80"></div>
       <div className="grid lg:grid-flow-col lg:grid-cols-2 mt-14">
