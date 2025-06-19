@@ -9,10 +9,10 @@ const Faq = () => {
       <div className="bg-zinc-700 bg-[url('./assets/Header/FaqBG.jpg')] lg:bg-fixed bg-cover h-[80vh]">
         <HeaderFaq />
       </div>
-      <div className="bg-zinc-800">
+      <div className='bg-zinc-800'>
         <FaqBody />
       </div>
-      <div className="bg-zinc-800 h-[110vh] lg:h-[80vh]">
+      <div className='bg-zinc-800 h-[110vh] lg:h-[80vh]'>
         <FaqFooter />
       </div>
     </>

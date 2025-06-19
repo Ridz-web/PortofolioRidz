@@ -67,19 +67,19 @@ const Roadmap = () => {
 
   return (
     <>
-      <div className="grid lg:grid-flow-col lg:grid-cols-3">
+      <div className='grid lg:grid-flow-col lg:grid-cols-3'>
         <motion.div
           ref={ref}
           initial={{ y: 10 }}
           animate={inView ? { y: 1 } : {}}
           transition={{ duration: 1 }}>
-          <div className="mx-auto hidden absolute lg:block">
+          <div className='mx-auto hidden absolute lg:block'>
             <a
-              href="https://www.w3schools.com/"
-              target="_blank"
-              rel="noopener noreferrer">
+              href='https://www.w3schools.com/'
+              target='_blank'
+              rel='noopener noreferrer'>
               <div
-                className="pb-40 ms-20 mt-24"
+                className='pb-40 ms-20 mt-24'
                 style={{
                   backgroundColor: zoomedI[0] ? "rgb(234 179 8)" : "#1c1c1c",
                   color: zoomedI[0] ? "#1c1c1c" : "#fff",
@@ -90,24 +90,24 @@ const Roadmap = () => {
                 }}
                 onMouseEnter={() => MouseEnter(0)}
                 onMouseLeave={() => MouseLeave(0)}>
-                <div className="font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10">
+                <div className='font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10'>
                   My learning place ✍
                 </div>
-                <p className="text-center m-8 mt-20 text-wrap">
+                <p className='text-center m-8 mt-20 text-wrap'>
                   I often find myself learning programming on my own through
                   various online resources rather than relying solely on my
                   school curriculum. It’s this self-taught approach that has
                   fueled my passion and allowed me to explore diverse coding
                   challenges.
                 </p>
-                <p className="text-center text-3xl">💻💻💻</p>
+                <p className='text-center text-3xl'>💻💻💻</p>
               </div>
             </a>
           </div>
         </motion.div>
         <div>
           <Container
-            maxWidth="md"
+            maxWidth='md'
             sx={{ display: "grid", placeItems: "center" }}>
             <Paper
               elevation={3}
@@ -115,19 +115,19 @@ const Roadmap = () => {
                 backgroundColor: "#1c1c1c",
                 boxShadow: "0 2px 15px rgb(234 179 8)",
               }}
-              className="shadow-xl shadow-yellow-500 pb-4 ">
-              <Box className="text-center text-white mb-8">
-                <div className="font-bold font-olga text-center text-4xl pt-10 text-yellow-500">
+              className='shadow-xl shadow-yellow-500 pb-4 '>
+              <Box className='text-center text-white mb-8'>
+                <div className='font-bold font-olga text-center text-4xl pt-10 text-yellow-500'>
                   My Learning Roadmap
                 </div>
-                <div className="h-1 bg-white w-80 mx-auto mb-4"></div>
+                <div className='h-1 bg-white w-80 mx-auto mb-4'></div>
               </Box>
               <motion.div
                 ref={ref}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 1 }}
-                className="flex items-center">
+                className='flex items-center'>
                 <Box
                   sx={{
                     display: "flex",
@@ -136,21 +136,21 @@ const Roadmap = () => {
                   }}>
                   <Stepper
                     activeStep={steps.length - 1}
-                    orientation="vertical"
+                    orientation='vertical'
                     sx={{ width: "100%", marginLeft: "15px" }}>
                     {steps.map((step, index) => (
                       <Step
                         key={index}
                         completed={completedSteps.includes(index)}>
                         <StepLabel>
-                          <div className="flex items-center">
+                          <div className='flex items-center'>
                             {step.label === "React" ? (
                               <motion.img
                                 src={step.img}
                                 alt={step.label}
-                                className="w-8 h-8 mr-2"
+                                className='w-8 h-8 mr-2'
                                 variants={rotateVariants}
-                                animate="animate"
+                                animate='animate'
                               />
                             ) : (
                               <img
@@ -164,7 +164,7 @@ const Roadmap = () => {
                                 }`}
                               />
                             )}
-                            <Typography variant="body1" className="text-white">
+                            <Typography variant='body1' className='text-white'>
                               {step.label}
                             </Typography>
                           </div>
@@ -174,7 +174,7 @@ const Roadmap = () => {
                   </Stepper>
                 </Box>
               </motion.div>
-              <Typography variant="h6" className="mt-4 text-white text-center">
+              <Typography variant='h6' className='mt-4 text-white text-center'>
                 {completedSteps.length === steps.length && "Keep going!"}
               </Typography>
             </Paper>
@@ -185,13 +185,13 @@ const Roadmap = () => {
           initial={{ y: -10 }}
           animate={inView ? { y: 1 } : {}}
           transition={{ duration: 1 }}>
-          <div className="mx-auto absolute hidden lg:block">
+          <div className='mx-auto absolute hidden lg:block'>
             <a
-              href="https://www.youtube.com/results?search_query=learning+programming+language+playlist"
-              target="_blank"
-              rel="noopener noreferrer">
+              href='https://www.youtube.com/results?search_query=learning+programming+language+playlist'
+              target='_blank'
+              rel='noopener noreferrer'>
               <div
-                className="pb-40 me-20 mt-24"
+                className='pb-40 me-20 mt-24'
                 style={{
                   backgroundColor: zoomedI[1] ? "rgb(234 179 8)" : "#1c1c1c",
                   color: zoomedI[1] ? "#1c1c1c" : "#fff",
@@ -202,17 +202,17 @@ const Roadmap = () => {
                 }}
                 onMouseEnter={() => MouseEnter(1)}
                 onMouseLeave={() => MouseLeave(1)}>
-                <div className="font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10">
+                <div className='font-medium font-glaci ps-3 pe-3 text-center text-2xl pt-10'>
                   My Goal 🎯
                 </div>
-                <p className="text-center m-8 mt-16 text-wrap">
+                <p className='text-center m-8 mt-16 text-wrap'>
                   My goal is to become a skilled full stack developer and to
                   gain extensive knowledge in the world of programming. With
                   expertise across various technologies, I aim to create
                   innovative and impactful solutions while continuously
                   deepening my knowledge and skills in this field.
                 </p>
-                <p className="text-center text-3xl">✨✨✨</p>
+                <p className='text-center text-3xl'>✨✨✨</p>
               </div>
             </a>
           </div>
